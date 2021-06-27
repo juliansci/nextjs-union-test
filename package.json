@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@xo-union/tk-component-buttons": "^10.6.1-canary-cc0064837.0",
+    "@xo-union/tk-ui-breakpoints": "^4.2.1-canary-cc0064837.0",
     "next": "10.2.3",
+    "next-transpile-modules": "^8.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },

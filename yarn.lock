@@ -242,6 +242,14 @@
   resolved "https://registry.yarnpkg.com/@xo-union/tk-css-utilities/-/tk-css-utilities-2.2.3-canary-cc0064837.0.tgz#9fe8190de3f32654ad322209df5c0b7a027e37a4"
   integrity sha512-lmCvRT5/EhpKEwfJ82AgnURGHDCc3O0uBasOxZxIxa3jgCNoc+EcNhssPbHWJQ7kdCPHs+lhPC0M59XqffrXsQ==
 
+"@xo-union/tk-ui-breakpoints@^4.2.1-canary-cc0064837.0":
+  version "4.2.1-canary-cc0064837.0"
+  resolved "https://registry.yarnpkg.com/@xo-union/tk-ui-breakpoints/-/tk-ui-breakpoints-4.2.1-canary-cc0064837.0.tgz#f7916aef88f63e178fb3d23c41104c3ec169fb64"
+  integrity sha512-oZug9GFuq9ZSV35+NvIwbjvWirKApAT/XTne3xIMNxH8Xj80Q3aVWMx9AEWJF9gci1cDs6vQqsL42EIOkbB/2g==
+  dependencies:
+    "@babel/runtime-corejs3" "^7.9.2"
+    prop-types "^15.7.2"
+
 "@xo-union/tk-ui-colors@3.0.3-canary-cc0064837.0":
   version "3.0.3-canary-cc0064837.0"
   resolved "https://registry.yarnpkg.com/@xo-union/tk-ui-colors/-/tk-ui-colors-3.0.3-canary-cc0064837.0.tgz#381e7678d6a740f0dd0af88a8f21ee3f8bc283eb"
@@ -809,6 +817,14 @@ encoding@0.1.13:
   dependencies:
     iconv-lite "^0.6.2"
 
+enhanced-resolve@^5.7.0:
+  version "5.8.2"
+  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.8.2.tgz#15ddc779345cbb73e97c611cd00c01c1e7bf4d8b"
+  integrity sha512-F27oB3WuHDzvR2DOGNTaYy0D5o0cnrv8TeI482VM4kYgQd/FT9lUQwuNsJ0oOHtBUq7eiW5ytqzp7nBFknL+GA==
+  dependencies:
+    graceful-fs "^4.2.4"
+    tapable "^2.2.0"
+
 es-abstract@^1.18.0-next.1, es-abstract@^1.18.0-next.2:
   version "1.18.3"
   resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.18.3.tgz#25c4c3380a27aa203c44b2b685bba94da31b63e0"
@@ -952,7 +968,7 @@ glob-to-regexp@^0.4.1:
   resolved "https://registry.yarnpkg.com/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz#c75297087c851b9a578bd217dd59a92f59fe546e"
   integrity sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==
 
-graceful-fs@^4.1.2:
+graceful-fs@^4.1.2, graceful-fs@^4.2.4:
   version "4.2.6"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.6.tgz#ff040b2b0853b23c3d31027523706f1885d76bee"
   integrity sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==
@@ -1314,6 +1330,14 @@ native-url@0.3.4:
   integrity sha512-6iM8R99ze45ivyH8vybJ7X0yekIcPf5GgLV5K0ENCbmRcaRIDoj37BC8iLEmaaBfqqb8enuZ5p0uhY+lVAbAcA==
   dependencies:
     querystring "^0.2.0"
+
+next-transpile-modules@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/next-transpile-modules/-/next-transpile-modules-8.0.0.tgz#56375cdc25ae5d23a834195f277fc2737b26cb97"
+  integrity sha512-Q2f2yB0zMJ8KJbIYAeZoIxG6cSfVk813zr6B5HzsLMBVcJ3FaF8lKr7WG66n0KlHCwjLSmf/6EkgI6QQVWHrDw==
+  dependencies:
+    enhanced-resolve "^5.7.0"
+    escalade "^3.1.1"
 
 next@10.2.3:
   version "10.2.3"
@@ -1971,6 +1995,11 @@ supports-color@^8.0.0:
   integrity sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==
   dependencies:
     has-flag "^4.0.0"
+
+tapable@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.2.0.tgz#5c373d281d9c672848213d0e037d1c4165ab426b"
+  integrity sha512-FBk4IesMV1rBxX2tfiK8RAmogtWn53puLOQlvO8XuwlgxcYbP4mVPS9Ph4aeamSyyVjOl24aYWAuc8U5kCVwMw==
 
 timers-browserify@2.0.12, timers-browserify@^2.0.4:
   version "2.0.12"
