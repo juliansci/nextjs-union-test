@@ -5,7 +5,7 @@ const { createSecureHeaders } = require('next-secure-headers');
 const nodeExternals = require('webpack-node-externals')
 
 const configs = {
-  webpack(config, { isServer, dev }) {
+  webpack(config, { isServer }) {
     if (isServer) {
       config.externals = [
         nodeExternals({
@@ -13,17 +13,25 @@ const configs = {
         }),
       ];
     }
-    config.plugins.push(
-      new MiniCssExtractPlugin({
-        filename: 'static/[name].css',
-      })
-    );
+
+    if (!isServer) {
+      config.plugins.push(
+        new MiniCssExtractPlugin({
+          filename: 'static/css/[contenthash].css',
+          chunkFilename: 'static/css/[contenthash].css',
+          ignoreOrder: true,
+        })
+      );
+      config.module.rules.push(
+        {
+          test: /\.s?css$/,
+          issuer: /\.(tsx?|jsx?)$/,
+          use: MiniCssExtractPlugin.loader,
+        },
+      )
+    }
+
     config.module.rules.push(
-      {
-        test: /\.s?css$/,
-        issuer: /\.(tsx?|jsx?)$/,
-        use: MiniCssExtractPlugin.loader,
-      },
       CSSModuleRule()
     );
 
