@@ -2,7 +2,7 @@ const withSourceMaps = require('@zeit/next-source-maps');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CSSModuleRule } = require('@xo-union/util-webpack');
 const { createSecureHeaders } = require('next-secure-headers');
-const nodeExternals = require('webpack-node-externals')
+const nodeExternals = require('webpack-node-externals');
 
 const configs = {
   webpack(config, { isServer }) {
@@ -22,18 +22,14 @@ const configs = {
           ignoreOrder: true,
         })
       );
-      config.module.rules.push(
-        {
-          test: /\.s?css$/,
-          issuer: /\.(tsx?|jsx?)$/,
-          use: MiniCssExtractPlugin.loader,
-        },
-      )
+      config.module.rules.push({
+        test: /\.s?css$/,
+        issuer: /\.(tsx?|jsx?)$/,
+        use: MiniCssExtractPlugin.loader,
+      });
     }
 
-    config.module.rules.push(
-      CSSModuleRule()
-    );
+    config.module.rules.push(CSSModuleRule());
 
     config.module.rules.push({
       test: /\.scss$/,
